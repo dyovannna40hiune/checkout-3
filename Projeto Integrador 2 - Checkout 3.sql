@@ -27,3 +27,17 @@ CREATE TABLE itens_pedido(
     FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
     FOREIGN KEY (produto_id) REFERENCES produtos(id)
 );
+
+INSERT INTO Produtos (nome, descricao, preco, estoque) VALUES
+('Café Expresso', 5.00, 200),
+('Cappuccino', 8.50, 150),
+('Pão de Queijo', 4.00, 100);
+
+INSERT INTO Pedidos (cliente, status, valor_total) VALUES
+('Ana', 'pago', 19.50),
+('Paulo', 'pendente', 12.50);
+
+INSERT INTO ItensPedido (pedido_id, produto_id, quantidade, preco_unitario) VALUES
+(1, 1, 1, 5.00),
+(1, 3, 2, 4.00),
+(1, 2, 1, 6.50);
